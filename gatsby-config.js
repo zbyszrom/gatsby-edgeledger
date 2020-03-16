@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   pathPrefix: "/edgeflex",
   siteMetadata: {
@@ -17,7 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-source-googlemaps-static`,
       options: {
-          key: `AIzaSyDdmxRzGzljPwCxNdc_FUKxj8xMDC79nss`,
+          key: process.env.PUBLIC_KEY,
           center: `Warsaw. Poland`,
       },
   },

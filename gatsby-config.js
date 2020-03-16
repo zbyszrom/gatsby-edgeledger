@@ -14,12 +14,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-googlemaps-static`,
+      options: {
+          key: `AIzaSyDdmxRzGzljPwCxNdc_FUKxj8xMDC79nss`,
+          center: `Warsaw. Poland`,
+      },
+  },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-smoothscroll`,
-    //`gatsby-plugin-anchor-links`
-    
-    
-    
+    `gatsby-plugin-sharp`, 
   ],
 }

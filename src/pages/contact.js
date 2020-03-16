@@ -1,7 +1,25 @@
 import React from 'react'
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+import { GoogleMap, LoadScript } from '@react-google-maps/api'
 import Layout from '../components/layout'
 
+const getMap = graphql `
+query StaticMapQuery {
+    Map: staticMap {
+        childFile {
+          childImageSharp {
+            fluid {
+                ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+}
+`
+
 const Contact = ()=>{
+    const data = useStaticQuery(getMap)
     return(
         <Layout>
             <div>
@@ -26,6 +44,10 @@ const Contact = ()=>{
                 </div>
                 <input type="submit" value="Send" ></input>
                 </form>
+            </div>
+            <h2>Map</h2>
+            <div>
+                <Img fluid = {data.Map.childFile.childImageSharp.fluid}/>
             </div>
         </Layout>
             

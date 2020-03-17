@@ -17,9 +17,11 @@ query {
 
 const Showcase = ()=>{
     const data = useStaticQuery(getImage)
-    return(
+    const backgroundFluid = data.Bcg
+    const backgroundFluidImageStack = [backgroundFluid.childImageSharp.fluid, 'linear-gradient(rgba(32, 32, 32, 0.60), rgba(128, 128, 128, 0.20))'].reverse()
+    return (
         <BackgroundImage 
-            fluid = {data.Bcg.childImageSharp.fluid} className = 'heroImg'>
+            fluid = {backgroundFluidImageStack} className = 'heroImg'>
             <div>
                 <h1>The Sky Is The Limit</h1>
                 <p >
@@ -27,9 +29,7 @@ const Showcase = ()=>{
                 </p>
                 <Link to = "/page-2">Read More</Link>
             </div>
-            </BackgroundImage>
-        
-        
+            </BackgroundImage>        
         
     )
 }

@@ -19,6 +19,21 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Inria Serif`,
+            
+          },
+          {
+            family: `Tomorrow`,
+            
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-source-googlemaps-static`,
       options: {
           key: process.env.PUBLIC_KEY,

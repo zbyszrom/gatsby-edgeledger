@@ -1,4 +1,26 @@
-h1 {
-    color: greenyellow
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+  }
+  body {
+      line-height: 1.5;
+      font-family: 'Inria Serif', serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Tomorrow', sans-serif;
+  }
+  h1 {
+    color: greenyellow;
+    
 
 }
+p {
+    margin: 0.75rem 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+

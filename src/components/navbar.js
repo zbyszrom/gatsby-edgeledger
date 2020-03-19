@@ -1,27 +1,60 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import {FaBookOpen} from "react-icons/fa"
+import styled from "styled-components"
 
+
+const Nav = styled.nav`
+    display: flex;
+  position: sticky;
+  top:0;
+  background: #333;
+  color: #fff;
+  justify-content: space-between;
+  z-index: 1;
+  padding: 1rem;
+  `
+const Ul = styled.ul`
+  display: flex;
+  align-items: center;
+  list-style: none; 
+
+`
+const Span= styled.span`
+color: greenyellow;
+`
+const Li = styled.li`
+
+`
+const SLink = styled(Link)`
+color: white;   
+padding: 0.75rem;
+margin: 0 0.25rem;
+&:hover{
+  background: #93cb52;
+  border-radius: 5px; 
+} 
+`
 const Navbar = ()=>{
     return(
-        <nav>
+        <Nav>
             <h1>
-                <FaBookOpen/>Edge Ledger
+            <Span><FaBookOpen/>Edge</Span> Ledger
             </h1>
-            <ul>
-                <li>
-                <Link to="/">Home</Link>
-                </li>
-                <li>
-                <Link to="/whot-who">What We Do</Link>
-                </li>
-                <li>
-                <Link to="/contact">Contact</Link>
-                </li>
-            </ul>
+            <Ul>
+                <Li>
+                <SLink to="/">Home</SLink>
+                </Li>
+                <Li>
+                <SLink to="/whot-who">What We Do</SLink>
+                </Li>
+                <Li>
+                <SLink to="/contact">Contact</SLink>
+                </Li>
+            </Ul>
         
         
-        </nav>
+        </Nav>
     )
 }
 export default Navbar

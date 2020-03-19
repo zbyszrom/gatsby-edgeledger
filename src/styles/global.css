@@ -11,16 +11,16 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Tomorrow', sans-serif;
   }
-  h1 {
-    color: greenyellow;
-    
-
-}
 p {
     margin: 0.75rem 0;
   }
-
-  a {
+a {
     text-decoration: none;
-  }
+  } 
+li {
+    list-style: none;
+}
 
+
+
+  

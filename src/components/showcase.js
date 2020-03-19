@@ -2,6 +2,7 @@ import React from'react'
 import {Link} from 'gatsby'
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from 'gatsby-background-image'
+import styled from "styled-components"
 
 const getImage = graphql`
 query {
@@ -14,6 +15,32 @@ query {
       }
 }
 `
+const H1 = styled.h1`
+font-size: 4rem;
+margin-bottom: 0.75rem;
+line-height: 1.1;
+color: white;
+`
+const P = styled.p`
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: greenyellow;
+`
+const Content = styled.div` 
+  text-align: center;
+`
+const SLink = styled(Link)`
+   display: inline-block;
+    color: #fff;
+    background: #93cb52;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+    &:hover {
+      background: #7ab436;
+    }
+
+`
 
 const Showcase = ()=>{
     const data = useStaticQuery(getImage)
@@ -22,13 +49,13 @@ const Showcase = ()=>{
     return (
         <BackgroundImage 
             fluid = {backgroundFluidImageStack} className = 'heroImg'>
-            <div>
-                <h1>The Sky Is The Limit</h1>
-                <p >
+            <Content>
+                <H1>The Sky Is The Limit</H1>
+                <P >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptatibus debitis praesentium inventore, eum deserunt.
-                </p>
-                <Link to = "/page-2">Read More</Link>
-            </div>
+                </P>
+                <SLink to = "/page-2" >Read More</SLink>
+            </Content>
             </BackgroundImage>        
         
     )

@@ -23,12 +23,10 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Inria Serif`,
-            
+            family: `Inria Serif`,       
           },
           {
-            family: `Tomorrow`,
-            
+            family: `Tomorrow`,        
           },
         ],
       },
@@ -41,6 +39,8 @@ module.exports = {
       },
   },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`, 
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`, 
+    `gatsby-plugin-sass`,
   ],
 }

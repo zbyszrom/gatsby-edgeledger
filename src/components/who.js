@@ -17,10 +17,13 @@ query {
 const Who = ()=>{
     const data = useStaticQuery(getPeople)
     return(
-        <section>
+        <>
+         <div>
           <Img 
             fluid = {data.Who.childImageSharp.fluid} className = ''/>
-            
+          </div>
+      <section>
+      
             <h2>Who We Are</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora culpa harum voluptas ratione enim consequuntur illo, atque, aut doloribus unde repellendus sit delectus beatae aspernatur placeat corrupti. Ipsa, itaque quas.</p>
       <h3>Our Team</h3>
@@ -31,8 +34,9 @@ const Who = ()=>{
         <li>Janet Williams: Investment Manager</li>
         <li>Kara Jackson: Senior Accountant</li>
       </ul>
+     
         </section>
-        
+        </>
     )
 }
 export default Who

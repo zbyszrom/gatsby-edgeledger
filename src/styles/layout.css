@@ -2,13 +2,3 @@ section{
   display: flex;
 }
 
-.heroImg {
-  min-height: calc(100vh - 11rem);
-  min-width: 97vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 5rem 0 1rem;
-  color: white;
-}

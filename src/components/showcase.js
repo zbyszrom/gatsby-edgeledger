@@ -15,22 +15,33 @@ query {
       }
 }
 `
-const H1 = styled.h1`
-font-size: 4rem;
-margin-bottom: 0.75rem;
-line-height: 1.1;
-color: white;
-`
-const P = styled.p`
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-  color: greenyellow;
+
+const SBackgroundImage = styled(BackgroundImage)`
+    min-height: calc(100vh - 11rem);
+    min-width: 97vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5rem 0 1rem;
+    color: white;
 `
 const Content = styled.div` 
-  text-align: center;
+    text-align: center;
+`
+const H1 = styled.h1`
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+    color: white;
+`
+const P = styled.p`
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: greenyellow;
 `
 const SLink = styled(Link)`
-   display: inline-block;
+    display: inline-block;
     color: #fff;
     background: #93cb52;
     padding: 0.5rem 2rem;
@@ -42,13 +53,14 @@ const SLink = styled(Link)`
 
 `
 
+
 const Showcase = ()=>{
     const data = useStaticQuery(getImage)
     const backgroundFluid = data.Bcg
     const backgroundFluidImageStack = [backgroundFluid.childImageSharp.fluid, 'linear-gradient(rgba(32, 32, 32, 0.60), rgba(128, 128, 128, 0.20))'].reverse()
     return (
-        <BackgroundImage 
-            fluid = {backgroundFluidImageStack} className = 'heroImg'>
+        <SBackgroundImage 
+            fluid = {backgroundFluidImageStack}>
             <Content>
                 <H1>The Sky Is The Limit</H1>
                 <P >
@@ -56,7 +68,7 @@ const Showcase = ()=>{
                 </P>
                 <SLink to = "/page-2" >Read More</SLink>
             </Content>
-            </BackgroundImage>        
+            </SBackgroundImage>        
         
     )
 }

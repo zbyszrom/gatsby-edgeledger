@@ -19,9 +19,15 @@ query StaticMapQuery {
 }
 `
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
   background: #93cb52;
   color: #fff;
   padding: 2rem;
+`
+const Group = styled.div`
+margin: 0.75rem;
+
 `
 
 
@@ -33,22 +39,22 @@ const Contact = ()=>{
                 <h2>Contact Us</h2>
                 <p>Please use the form below to contact us</p>
                 <form>
-                <div >
-                <label for="name">Name</label>
+                <Group>
+                <label for="name">Name</label><br/>
                 <input type="text" name="name" id="name" placeholder="Enter Name"/>
-                </div>
-                <div >
-                <label for="email">Email</label>
+                </Group>
+                <Group >
+                <label for="email">Email</label><br/>
                 <input type="email" name="email"  placeholder="Enter Email"/>
-                </div>
-                <div >
-                <label for="phonne">Phone Number</label>
+                </Group>
+                <Group>
+                <label for="phonne">Phone Number</label><br/>
                 <input type="text" name="phone" placeholder="Enter Phone Number"/>
-                </div>
-                <div >
-                <label for="message">Message</label>
+                </Group>
+                <Group>
+                <label for="message">Message</label><br/>
                 <textarea name="message" placeholder="Enter Message"></textarea>
-                </div>
+                </Group>
                 <input type="submit" value="Send" ></input>
                 </form>
             </Container>

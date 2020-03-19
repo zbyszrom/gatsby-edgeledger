@@ -22,7 +22,7 @@ const Container = styled.div`
 const Who = ()=>{
     const data = useStaticQuery(getPeople)
     return(
-        <>
+        <div>
          <div>
           <Img 
             fluid = {data.Who.childImageSharp.fluid} className = ''/>
@@ -41,7 +41,7 @@ const Who = ()=>{
       </ul>
      </Container>
       </section>
-        </>
+        </div>
     )
 }
 export default Who

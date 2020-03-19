@@ -7,34 +7,41 @@ const Container = styled.div`
   color: #333;
   padding: 1.5rem 0;
 `
+const Item = styled.div`
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+`
 
 const What = ()=>{
     return(
       <section className='container'>
+      <div> 
         <Container>
             <h2><span>What</span> We Do</h2>
-            <div>
-            <div>
-              <FaUniversity/>
+            <div className = 'items'>
+            <Item>
+              <div className = 'i'><FaUniversity/></div>
             <h3>Investment Banking</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptatum!</p>
-            </div>
-            </div>
-            <div>
-            <div>
-              <FaBookReader/>
+            </Item>
+            
+            
+            <Item>
+              <div className = 'i'><FaBookReader/></div>
               <h3>Portfolio Management</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptatum!</p>
-            </div>
-            </div>
-            <div>
-            <div>
-              <FaPencilAlt/>
+            </Item>
+            
+          
+            <Item>
+              <div className = 'i'><FaPencilAlt/></div>
               <h3>Tax & Custodial</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptatum!</p>
-            </div>
+            </Item>
             </div>
         </Container>
+        </div>
       </section>
        
         

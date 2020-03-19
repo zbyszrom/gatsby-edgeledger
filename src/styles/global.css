@@ -11,6 +11,12 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Tomorrow', sans-serif;
   }
+  h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.1;
+      text-align:center;
+  }
 p {
     margin: 0.75rem 0;
   }
@@ -19,6 +25,9 @@ a {
   } 
 li {
     list-style: none;
+}
+span {
+    color: #93cb52;
 }
 
 

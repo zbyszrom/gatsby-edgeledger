@@ -1,6 +1,7 @@
 import React from'react'
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import styled from 'styled-components' 
 
 const getPeople = graphql `
 query {
@@ -13,7 +14,11 @@ query {
     }
 }
 `
-
+const Container = styled.div`
+  background: #333;
+  color: #fff;
+  padding: 2rem;
+`
 const Who = ()=>{
     const data = useStaticQuery(getPeople)
     return(
@@ -22,9 +27,9 @@ const Who = ()=>{
           <Img 
             fluid = {data.Who.childImageSharp.fluid} className = ''/>
           </div>
-      <section>
-      
-            <h2>Who We Are</h2>
+      <section >
+      <Container>
+            <h2><span>Who </span>We Are</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora culpa harum voluptas ratione enim consequuntur illo, atque, aut doloribus unde repellendus sit delectus beatae aspernatur placeat corrupti. Ipsa, itaque quas.</p>
       <h3>Our Team</h3>
       <ul>
@@ -34,8 +39,8 @@ const Who = ()=>{
         <li>Janet Williams: Investment Manager</li>
         <li>Kara Jackson: Senior Accountant</li>
       </ul>
-     
-        </section>
+     </Container>
+      </section>
         </>
     )
 }

@@ -12,9 +12,9 @@ const Clients = ()=>{
   
 
     return(
-        <section>
+        <section className='container'>
         <div> 
-        <h2>Our Clients</h2>
+        <h2><span>Our</span> Clients</h2>
         <div>
        
         <div><img src={logo1} alt="Client"/></div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import styled from 'styled-components'
 import { GoogleMap, LoadScript } from '@react-google-maps/api'
 import Layout from '../components/layout'
 
@@ -17,12 +18,18 @@ query StaticMapQuery {
       }
 }
 `
+const Container = styled.div`
+  background: #93cb52;
+  color: #fff;
+  padding: 2rem;
+`
+
 
 const Contact = ()=>{
     const data = useStaticQuery(getMap)
     return(
         <Layout>
-            <div>
+            <Container>
                 <h2>Contact Us</h2>
                 <p>Please use the form below to contact us</p>
                 <form>
@@ -44,7 +51,7 @@ const Contact = ()=>{
                 </div>
                 <input type="submit" value="Send" ></input>
                 </form>
-            </div>
+            </Container>
             <h2>Map</h2>
             <div>
                 <Img fluid = {data.Map.childFile.childImageSharp.fluid}/>

@@ -1,17 +1,24 @@
 import React from'react'
 import {FaUniversity, FaBookReader, FaPencilAlt} from "react-icons/fa"
+import styled from "styled-components"
+
+const Container = styled.div`
+  background: #f4f4f4;
+  color: #333;
+  padding: 1.5rem 0;
+`
 
 const What = ()=>{
     return(
-        <section>
-             <div>
-            <h2>What We Do</h2>
+      <section className='container'>
+        <Container>
+            <h2><span>What</span> We Do</h2>
             <div>
             <div>
               <FaUniversity/>
             <h3>Investment Banking</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptatum!</p>
-          </div>
+            </div>
             </div>
             <div>
             <div>
@@ -27,8 +34,8 @@ const What = ()=>{
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptatum!</p>
             </div>
             </div>
-        </div>
-        </section>
+        </Container>
+      </section>
        
         
     )

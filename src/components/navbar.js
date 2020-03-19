@@ -14,9 +14,6 @@ const Nav = styled.nav`
   z-index: 1;
   padding: 1rem;
   `
-const Span= styled.span`
-  color: greenyellow;
-`
 const Ul = styled.ul`
   display: flex;
   align-items: center;
@@ -36,7 +33,7 @@ const Navbar = ()=>{
     return(
         <Nav>
             <h1>
-            <Span><FaBookOpen/>Edge</Span> Ledger
+            <span><FaBookOpen/>Edge</span> Ledger
             </h1>
             <Ul>
                 <li>

@@ -19,6 +19,12 @@ const Container = styled.div`
   color: #fff;
   padding: 2rem;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  
+
 `
 const Who = ()=>{
     const data = useStaticQuery(getPeople)

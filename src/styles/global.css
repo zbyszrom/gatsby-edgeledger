@@ -23,9 +23,15 @@ p {
   }
 a {
     text-decoration: none;
-  } 
+  }
+ul {
+  margin: 0.5rem 0;
+  list-style: none;
+}
+  
+
 li {
-    list-style: none;
+    margin: 0.5rem;
 }
 span {
     color: #93cb52;

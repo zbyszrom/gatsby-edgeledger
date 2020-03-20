@@ -30,6 +30,25 @@ li {
 span {
     color: #93cb52;
 }
+input{
+  width: 100%;
+  padding: 0.5rem;
+    }
+textarea {
+  width: 100%;
+  padding: 2rem;
+} 
+.submit {
+    color: white;
+    background: #333;
+    padding: 0.5rem;
+    border: none;
+    
+
+    
+    
+}
+
 .items {
     display: flex;
     padding: 1rem

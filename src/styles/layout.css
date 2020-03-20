@@ -12,7 +12,8 @@ section{
   display: flex;
 }
 .img {
-  flex: 1;
+  flex: 2.1;
+  
 }
 .high {
   display: flex;

@@ -58,12 +58,14 @@ const Contact = ()=>{
                 <label for="message">Message</label><br/>
                 <textarea name="message" placeholder="Enter Message"></textarea>
                 </Group>
-                <input type="submit" value="Send" ></input>
+                <Group>
+                <input type="submit" value="Send" className = 'submit'></input>
+                </Group>
                 </form>
             </Container>
             
             <div className ='img'>
-            <h2>Map</h2>
+            
                 <Img fluid = {data.Map.childFile.childImageSharp.fluid}/>
             </div>
             

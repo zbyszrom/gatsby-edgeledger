@@ -16,8 +16,8 @@ const Simg = styled.img`
 const Clients = ()=>{
 
     return(
-        <section className='container'>
-        <div> 
+        <section >
+        <div className ='container'> 
         <h2><span>Our</span> Clients</h2>
         <div className ='items'>
        

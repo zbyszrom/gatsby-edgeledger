@@ -40,7 +40,7 @@ const Navbar = ()=>{
                 <SLink to="/">Home</SLink>
                 </li>
                 <li>
-                <SLink to="/whot-who">What We Do</SLink>
+                <SLink to="/what-who">What We Do</SLink>
                 </li>
                 <li>
                 <SLink to="/contact">Contact</SLink>

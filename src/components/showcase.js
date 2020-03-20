@@ -17,7 +17,7 @@ query {
 `
 
 const SBackgroundImage = styled(BackgroundImage)`
-    min-height: calc(100vh - 11rem);
+    min-height: calc(100vh - 10rem);
     min-width: 97vw;
     display: flex;
     flex-direction: column;
@@ -66,7 +66,7 @@ const Showcase = ()=>{
                 <P >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptatibus debitis praesentium inventore, eum deserunt.
                 </P>
-                <SLink to = "/page-2" >Read More</SLink>
+                <SLink to = "/what-who" >Read More</SLink>
             </Content>
             </SBackgroundImage>        
         

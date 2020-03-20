@@ -5,7 +5,7 @@ const Sfooter = styled.footer`
   background: #333;
   color: #fff;
   text-align:center;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
 `
 
 const Footer = ()=>{

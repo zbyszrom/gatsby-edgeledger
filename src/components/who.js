@@ -18,16 +18,16 @@ const Container = styled.div`
   background: #333;
   color: #fff;
   padding: 2rem;
+  flex: 1;
 `
 const Who = ()=>{
     const data = useStaticQuery(getPeople)
     return(
-        <div>
-         <div>
-          <Img 
-            fluid = {data.Who.childImageSharp.fluid} className = ''/>
-          </div>
-      <section >
+        <section>
+        <div className = 'img'>
+        <Img fluid = {data.Who.childImageSharp.fluid} className = ''/>
+        </div>  
+      
       <Container>
             <h2><span>Who </span>We Are</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora culpa harum voluptas ratione enim consequuntur illo, atque, aut doloribus unde repellendus sit delectus beatae aspernatur placeat corrupti. Ipsa, itaque quas.</p>
@@ -40,8 +40,8 @@ const Who = ()=>{
         <li>Kara Jackson: Senior Accountant</li>
       </ul>
      </Container>
-      </section>
-        </div>
+      
+        </section>
     )
 }
 export default Who

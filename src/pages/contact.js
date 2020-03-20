@@ -24,6 +24,7 @@ const Container = styled.div`
   background: #93cb52;
   color: #fff;
   padding: 2rem;
+  flex: 1;
 `
 const Group = styled.div`
 margin: 0.75rem;
@@ -35,6 +36,8 @@ const Contact = ()=>{
     const data = useStaticQuery(getMap)
     return(
         <Layout>
+          <section className ='high'>
+            
             <Container>
                 <h2>Contact Us</h2>
                 <p>Please use the form below to contact us</p>
@@ -58,10 +61,13 @@ const Contact = ()=>{
                 <input type="submit" value="Send" ></input>
                 </form>
             </Container>
+            
+            <div className ='img'>
             <h2>Map</h2>
-            <div>
                 <Img fluid = {data.Map.childFile.childImageSharp.fluid}/>
             </div>
+            
+            </section>
         </Layout>
             
     )

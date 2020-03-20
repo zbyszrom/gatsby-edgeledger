@@ -58,9 +58,9 @@ const Contact = ()=>{
                 <label for="message">Message</label><br/>
                 <textarea name="message" placeholder="Enter Message"></textarea>
                 </Group>
-                <Group>
+                <div className ='sub'>
                 <input type="submit" value="Send" className = 'submit'></input>
-                </Group>
+                </div>
                 </form>
             </Container>
             

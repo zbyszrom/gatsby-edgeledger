@@ -1,5 +1,6 @@
 section{
-  display: flex;
+ display: flex;
+ 
   
 }
 .container {
@@ -7,13 +8,16 @@ section{
   margin: auto;
   padding: 0 2rem;
   overflow: hidden;
-  
+
 }
 .who {
   display: flex;
 }
 .img {
-  flex: 1.5;
+  flex: 1;
+  max-width: 50%
+
+  
   
 }
 .high {

@@ -10,8 +10,8 @@ query StaticMapQuery {
     Map: staticMap {
         childFile {
           childImageSharp {
-            fluid {
-                ...GatsbyImageSharpFluid
+            fixed(width:550) {
+                ...GatsbyImageSharpFixed
             }
           }
         }
@@ -66,7 +66,7 @@ const Contact = ()=>{
             
             <div className ='img'>
             
-                <Img fluid = {data.Map.childFile.childImageSharp.fluid}/>
+                <Img fixed = {data.Map.childFile.childImageSharp.fixed}/>
             </div>
             
             </section>

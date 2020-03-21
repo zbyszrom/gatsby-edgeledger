@@ -2,13 +2,14 @@ import React from'react'
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from 'styled-components' 
+import Image from '../images/people.jpg'
 
 const getPeople = graphql `
 query {
   Who: file(name: {eq: "people"}) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fixed (height:450) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
@@ -31,7 +32,8 @@ const Who = ()=>{
     return(
         <section>
         <div className = 'img'>
-        <Img fluid = {data.Who.childImageSharp.fluid} className = ''/>
+        
+        <img src = {Image}/>
         </div>  
       
       <Container>
